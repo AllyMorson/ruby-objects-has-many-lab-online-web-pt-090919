@@ -1,32 +1,34 @@
-req 'pry'
+require 'pry'
 
-class Author 
-  attr_accessor :name 
+class Author
+  attr_accessor :name
+
   @@all = []
-  
+
   def initialize(name)
-    @name = name 
-    @@all << self 
-  end 
-  
+    @name = name
+    @@all << self
+  end
+
+  def self.all
+    @@all
+  end
+
   def add_post(post)
-    post.author = self #akes in an argument of a post and associates that post with the author by telling the post that it belongs to that author
-  end 
-  
-  def add_post_by_title(title) #takes in an argumentof a post title, 
-    post = Post.new(title) #creates a new post with it 
-    post.author = self #associates the post and author
-  end 
-  
-  def posts 
-Post.all.select {|post| post.author == self} #returns the total number of posts associated to all existing authors
-end 
+    post.author = self
+  end
 
-def self.post_count 
-  post.all.count 
-end 
+  def add_post_by_title(title)
+    post = Post.new(title)
+    post.author = self
+  end
 
-end 
+  def posts
+    Post.all.select {|post| post.author == self}
+  end
 
-
+  def self.post_count
+    Post.all.count
+  end
+end
   

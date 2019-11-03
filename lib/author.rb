@@ -19,6 +19,7 @@ class Author
   def posts 
 Author.all.select {|post| post.author == self} #returns the total number of posts associated to all existing authors
 end 
+
 end 
 
 

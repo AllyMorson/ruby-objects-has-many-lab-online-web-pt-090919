@@ -7,5 +7,5 @@ class Post
   end 
   
   def self.all 
-    posts.all.select {post
+    Posts.all.select {|post| post.title == self} 
   

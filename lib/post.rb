@@ -8,8 +8,7 @@ class Post
     @@all << self
   end
   
-  
-  
   def self.all 
+    @@all 
     Posts.all.select {|post| post.title == self} 
   

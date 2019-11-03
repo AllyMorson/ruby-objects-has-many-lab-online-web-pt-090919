@@ -1,3 +1,5 @@
+req "Pry"
+
 class Author 
   attr_accessor :name 
   @@all = []

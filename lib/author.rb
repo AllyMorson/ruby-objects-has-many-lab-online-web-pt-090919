@@ -21,7 +21,8 @@ Post.all.select {|post| post.author == self} #returns the total number of posts 
 end 
 
 def self.post_count 
-  
+  post.all.count 
+end 
 
 end 
 

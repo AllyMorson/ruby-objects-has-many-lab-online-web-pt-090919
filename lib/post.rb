@@ -3,10 +3,12 @@ class Post
  
   @@all = []
   
-  def inititalize(title)
-    @title = title 
-    @@all << self 
-  end 
+   def initialize(title)
+    @title = title
+    @@all << self
+  end
+  
+  
   
   def self.all 
     Posts.all.select {|post| post.title == self} 

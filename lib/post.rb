@@ -4,6 +4,7 @@ class Post
   @@all = []
   
   def inititalize(title)
+    @title = title 
     @@all << self 
   end 
   

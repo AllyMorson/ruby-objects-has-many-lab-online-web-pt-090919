@@ -11,5 +11,8 @@ class Post
   def self.all 
     @@all # Post .all is a class method that returns an array of all post instances that have been created
   end 
+  
+  def author_name
+    author.name = self 
 end 
   

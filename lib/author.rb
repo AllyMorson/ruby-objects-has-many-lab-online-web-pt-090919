@@ -1,4 +1,4 @@
-req "Pry"
+req 'pry'
 
 class Author 
   attr_accessor :name 

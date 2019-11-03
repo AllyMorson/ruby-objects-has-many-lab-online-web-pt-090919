@@ -9,6 +9,7 @@ class Post
   end
   
   def self.all 
-    @@all 
-    Posts.all.select {|post| post.title == self} 
+    @@all # Post .all is a class method that returns an array of all post instances that have been created
+  end 
+  
   
